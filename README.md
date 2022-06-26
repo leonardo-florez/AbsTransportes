@@ -1,7 +1,7 @@
 # AbsTransportes
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.7.
-![alt text](https://github.com/leonardo-florez/AbsTransportes/blob/master/Data_Base/Diagrama de componentes.jpg?raw=true)
+![alt text](https://github.com/leonardo-florez/AbsTransportes/blob/master/Data_Base/Diagrama_de_componentes.jpg?raw=true)
 ![alt text](https://github.com/leonardo-florez/AbsTransportes/blob/master/Data_Base/Descripcion.jpg?raw=true)
 
 
