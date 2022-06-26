@@ -1,0 +1,19 @@
+.flex {
+    display: flex;
+}
+
+.toolbar-justify {
+    justify-content: space-between;
+}
+
+.menu {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #3f51b5;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50% 20% / 10% 40%;
+}

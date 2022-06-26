@@ -5,6 +5,7 @@ import { ProveedorRoutingModule } from './proveedor-routing.module';
 import { ConsultarProveedoresComponent } from './pages/consultar-proveedores/consultar-proveedores.component';
 import { CrearProveedorComponent } from './pages/crear-proveedor/crear-proveedor.component';
 import { EditarProveedorComponent } from './pages/editar-proveedor/editar-proveedor.component';
+import { MaterialModule } from '../shared/material/material.module';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { EditarProveedorComponent } from './pages/editar-proveedor/editar-provee
   ],
   imports: [
     CommonModule,
-    ProveedorRoutingModule
+    ProveedorRoutingModule,
+    MaterialModule
   ],
   exports: [
     ConsultarProveedoresComponent,
