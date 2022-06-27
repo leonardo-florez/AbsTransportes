@@ -23,7 +23,7 @@ export class CrearProveedorComponent implements OnInit {
     ) {
     this.form = this.fb.group({
       name: ['', Validators.required],
-      identification: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(10)]],
+      document: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(10)]],
       adress: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       vehicles: [ '', [Validators.required, Validators.max(100)]],
@@ -70,8 +70,8 @@ export class CrearProveedorComponent implements OnInit {
     return this.form.get('name')!;
   }
 
-  get identification() {
-    return this.form.get('identification')!;
+  get document() {
+    return this.form.get('document')!;
   }
 
   get adress() {

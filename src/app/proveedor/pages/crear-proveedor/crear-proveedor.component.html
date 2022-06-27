@@ -18,11 +18,11 @@
                 </div>
             </div>
             <div class="col-6">
-                <label for="identification" class="form-label">Número de identificación:</label>
-                <input type="text" id="identification" name="identification" formControlName="identification" required
+                <label for="document" class="form-label">Número de identificación:</label>
+                <input type="text" id="document" name="document" formControlName="document" required
                     minlength="1" maxlength="250" class="form-control form-control-sm"
-                    [class.is-invalid]="identification.invalid && (identification.dirty || identification.touched)">
-                <div *ngIf="identification.invalid && (identification.dirty || identification.touched)" class="invalid-feedback">
+                    [class.is-invalid]="document.invalid && (document.dirty || document.touched)">
+                <div *ngIf="document.invalid && (document.dirty || document.touched)" class="invalid-feedback">
                     <div *ngIf="identification.hasError('required') && !(identification.hasError('minlength') || identification.hasError('maxlength'))">
                         Este campo es requerido.
                     </div>

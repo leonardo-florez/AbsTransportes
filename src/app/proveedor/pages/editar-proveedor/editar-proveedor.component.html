@@ -1,1 +1,91 @@
-<p>editar-proveedor works!</p>
+<div class="container">
+    <div class="row mb-5">
+        <div class="col-auto form-title mt-3">
+            <strong>Modificar Proveedor</strong>
+        </div>
+    </div>
+    <form [formGroup]="form">
+        <div class="row">
+            <div class="col-6">
+                <label for="name" class="form-label">Nombre del proveedor:</label>
+                <input type="text" id="name" name="name" formControlName="name" required
+                    minlength="1" maxlength="250" class="form-control form-control-sm"
+                    [class.is-invalid]="name.invalid && (name.dirty || name.touched)">
+                <div *ngIf="name.invalid && (name.dirty || name.touched)" class="invalid-feedback">
+                    <div *ngIf="name.hasError('required')">
+                        Este campo es requerido.
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <label for="document" class="form-label">Número de identificación:</label>
+                <input type="text" id="document" name="document" formControlName="document" required
+                    minlength="1" maxlength="250" class="form-control form-control-sm"
+                    [class.is-invalid]="document.invalid && (document.dirty || document.touched)">
+                <div *ngIf="document.invalid && (document.dirty || document.touched)" class="invalid-feedback">
+                    <div *ngIf="identification.hasError('required') && !(identification.hasError('minlength') || identification.hasError('maxlength'))">
+                        Este campo es requerido.
+                    </div>
+                    <div *ngIf="identification.hasError('minlength')">
+                        El documento debe tener mínimo 5 caracteres.
+                    </div>
+                    <div *ngIf="identification.hasError('maxlength')">
+                        El documento debe tener máximo 10 caracteres.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-6">
+                <label for="adress" class="form-label">Dirección:</label>
+                <input type="text" id="adress" name="adress" formControlName="adress" required
+                    minlength="1" maxlength="250" class="form-control form-control-sm"
+                    [class.is-invalid]="adress.invalid && (adress.dirty || adress.touched)">
+                <div *ngIf="adress.invalid && (adress.dirty || adress.touched)" class="invalid-feedback">
+                    <div *ngIf="adress.hasError('required')">
+                        Este campo es requerido.
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <label for="email" class="form-label">Correo electrónico:</label>
+                <input type="text" id="email" name="email" formControlName="email" required
+                    minlength="1" maxlength="250" class="form-control form-control-sm"
+                    [class.is-invalid]="email.invalid && (email.dirty || email.touched)">
+                <div *ngIf="email.invalid && (email.dirty || email.touched)" class="invalid-feedback">
+                    <div *ngIf="email.hasError('required') && !email.hasError('email')">
+                        Este campo es requerido.
+                    </div>
+                    <div *ngIf="email.hasError('email')">
+                        Debe ingresar un email valido.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-6">
+                <label for="vehicles" class="form-label">Cantidad de vehículos disponibles:</label>
+                <input type="number" id="vehicles" name="vehicles" formControlName="vehicles" required
+                    minlength="1" maxlength="250" class="form-control form-control-sm"
+                    [class.is-invalid]="vehicles.invalid && (vehicles.dirty || vehicles.touched)">
+                <div *ngIf="vehicles.invalid && (vehicles.dirty || vehicles.touched)" class="invalid-feedback">
+                    <div *ngIf="vehicles.hasError('required') && !vehicles.hasError('max')">
+                        Este campo es requerido.
+                    </div>
+                    <div *ngIf="vehicles.hasError('max')">
+                        El valor máximo es 100.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-6">
+                <button mat-flat-button color="primary" (click)="editProveedor()" style="width: 70%;">Enviar</button>
+            </div>
+        </div>
+
+    </form>
+</div>

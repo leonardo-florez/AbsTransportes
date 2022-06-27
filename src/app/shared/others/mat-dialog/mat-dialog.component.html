@@ -3,6 +3,6 @@
   <h3>{{data.body}}</h3>
 </mat-dialog-content>
 <mat-dialog-actions>
-  <button mat-flat-button color="primary" [mat-dialog-close]="false">{{data.options[0]}}</button>
-  <button mat-flat-button color="primary" [mat-dialog-close]="true">{{data.options[1]}}</button>
+  <button mat-flat-button color="primary" [mat-dialog-close]="false" *ngIf="data.options[0]">{{data.options[0]}}</button>
+  <button mat-flat-button color="primary" [mat-dialog-close]="true" *ngIf="data.options[1]">{{data.options[1]}}</button>
 </mat-dialog-actions>
