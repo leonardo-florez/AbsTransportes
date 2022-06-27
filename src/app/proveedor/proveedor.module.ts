@@ -7,6 +7,7 @@ import { ConsultarProveedoresComponent } from './pages/consultar-proveedores/con
 import { CrearProveedorComponent } from './pages/crear-proveedor/crear-proveedor.component';
 import { EditarProveedorComponent } from './pages/editar-proveedor/editar-proveedor.component';
 import { MaterialModule } from '../shared/material/material.module';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { MaterialModule } from '../shared/material/material.module';
     CommonModule,
     ProveedorRoutingModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule
   ],
   exports: [
     ConsultarProveedoresComponent,
