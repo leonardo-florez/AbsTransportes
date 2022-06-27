@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { ProveedorRoutingModule } from './proveedor-routing.module';
 import { ConsultarProveedoresComponent } from './pages/consultar-proveedores/consultar-proveedores.component';
@@ -17,7 +18,8 @@ import { MaterialModule } from '../shared/material/material.module';
   imports: [
     CommonModule,
     ProveedorRoutingModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
   ],
   exports: [
     ConsultarProveedoresComponent,

@@ -1,1 +1,59 @@
-<p>crear-proveedor works!</p>
+<div class="container">
+    <div class="row mb-5">
+        <div class="col-auto form-title mt-3">
+            <strong>Crear Nuevo Proveedor</strong>
+        </div>
+    </div>
+    <form [formGroup]="form">
+        <div class="row">
+            <div class="col-6">
+                <label for="name" class="form-label">Nombre del proveedor:</label>
+                <input type="text" id="name" name="name" formControlName="name" required
+                    minlength="1" maxlength="250" class="form-control form-control-sm"
+                    [class.is-invalid]="name.invalid && (name.dirty || name.touched)">
+                <div *ngIf="name.invalid && (name.dirty || name.touched)" class="invalid-feedback">
+                    <div *ngIf="name.hasError('required')">
+                        Este campo es requerido.
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <label for="identification" class="form-label">Número de identificación:</label>
+                <input type="text" id="identification" name="identification" formControlName="identification" required
+                    minlength="1" maxlength="250" class="form-control form-control-sm"
+                    [class.is-invalid]="identification.invalid && (identification.dirty || identification.touched)">
+                <div *ngIf="identification.invalid && (identification.dirty || identification.touched)" class="invalid-feedback">
+                    <div *ngIf="identification.hasError('required')">
+                        Este campo es requerido.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-6">
+                <label for="adress" class="form-label">Dirección:</label>
+                <input type="text" id="adress" name="adress" formControlName="adress" required
+                    minlength="1" maxlength="250" class="form-control form-control-sm"
+                    [class.is-invalid]="adress.invalid && (adress.dirty || adress.touched)">
+                <div *ngIf="adress.invalid && (adress.dirty || adress.touched)" class="invalid-feedback">
+                    <div *ngIf="adress.hasError('required')">
+                        Este campo es requerido.
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <label for="email" class="form-label">Correo electrónico:</label>
+                <input type="text" id="email" name="email" formControlName="email" required
+                    minlength="1" maxlength="250" class="form-control form-control-sm"
+                    [class.is-invalid]="email.invalid && (email.dirty || email.touched)">
+                <div *ngIf="email.invalid && (email.dirty || email.touched)" class="invalid-feedback">
+                    <div *ngIf="email.hasError('required')">
+                        Este campo es requerido.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</div>
