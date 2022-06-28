@@ -23,13 +23,13 @@
                     minlength="1" maxlength="250" class="form-control form-control-sm"
                     [class.is-invalid]="document.invalid && (document.dirty || document.touched)">
                 <div *ngIf="document.invalid && (document.dirty || document.touched)" class="invalid-feedback">
-                    <div *ngIf="identification.hasError('required') && !(identification.hasError('minlength') || identification.hasError('maxlength'))">
+                    <div *ngIf="document.hasError('required') && !(document.hasError('minlength') || document.hasError('maxlength'))">
                         Este campo es requerido.
                     </div>
-                    <div *ngIf="identification.hasError('minlength')">
+                    <div *ngIf="document.hasError('minlength')">
                         El documento debe tener mínimo 5 caracteres.
                     </div>
-                    <div *ngIf="identification.hasError('maxlength')">
+                    <div *ngIf="document.hasError('maxlength')">
                         El documento debe tener máximo 10 caracteres.
                     </div>
                 </div>

@@ -9,7 +9,7 @@
             <div class="col-6">
                 <label for="name" class="form-label">Nombre del proveedor:</label>
                 <input type="text" id="name" name="name" formControlName="name" required
-                    minlength="1" maxlength="250" class="form-control form-control-sm"
+                    class="form-control form-control-sm"
                     [class.is-invalid]="name.invalid && (name.dirty || name.touched)">
                 <div *ngIf="name.invalid && (name.dirty || name.touched)" class="invalid-feedback">
                     <div *ngIf="name.hasError('required')">
@@ -23,13 +23,13 @@
                     minlength="1" maxlength="250" class="form-control form-control-sm"
                     [class.is-invalid]="document.invalid && (document.dirty || document.touched)">
                 <div *ngIf="document.invalid && (document.dirty || document.touched)" class="invalid-feedback">
-                    <div *ngIf="identification.hasError('required') && !(identification.hasError('minlength') || identification.hasError('maxlength'))">
+                    <div *ngIf="document.hasError('required') && !(document.hasError('minlength') || document.hasError('maxlength'))">
                         Este campo es requerido.
                     </div>
-                    <div *ngIf="identification.hasError('minlength')">
+                    <div *ngIf="document.hasError('minlength')">
                         El documento debe tener mínimo 5 caracteres.
                     </div>
-                    <div *ngIf="identification.hasError('maxlength')">
+                    <div *ngIf="document.hasError('maxlength')">
                         El documento debe tener máximo 10 caracteres.
                     </div>
                 </div>
@@ -40,7 +40,7 @@
             <div class="col-6">
                 <label for="adress" class="form-label">Dirección:</label>
                 <input type="text" id="adress" name="adress" formControlName="adress" required
-                    minlength="1" maxlength="250" class="form-control form-control-sm"
+                    class="form-control form-control-sm"
                     [class.is-invalid]="adress.invalid && (adress.dirty || adress.touched)">
                 <div *ngIf="adress.invalid && (adress.dirty || adress.touched)" class="invalid-feedback">
                     <div *ngIf="adress.hasError('required')">
@@ -51,7 +51,7 @@
             <div class="col-6">
                 <label for="email" class="form-label">Correo electrónico:</label>
                 <input type="text" id="email" name="email" formControlName="email" required
-                    minlength="1" maxlength="250" class="form-control form-control-sm"
+                    class="form-control form-control-sm"
                     [class.is-invalid]="email.invalid && (email.dirty || email.touched)">
                 <div *ngIf="email.invalid && (email.dirty || email.touched)" class="invalid-feedback">
                     <div *ngIf="email.hasError('required') && !email.hasError('email')">
@@ -68,7 +68,7 @@
             <div class="col-6">
                 <label for="vehicles" class="form-label">Cantidad de vehículos disponibles:</label>
                 <input type="number" id="vehicles" name="vehicles" formControlName="vehicles" required
-                    minlength="1" maxlength="250" class="form-control form-control-sm"
+                    class="form-control form-control-sm"
                     [class.is-invalid]="vehicles.invalid && (vehicles.dirty || vehicles.touched)">
                 <div *ngIf="vehicles.invalid && (vehicles.dirty || vehicles.touched)" class="invalid-feedback">
                     <div *ngIf="vehicles.hasError('required') && !vehicles.hasError('max')">
